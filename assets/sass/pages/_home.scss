@@ -1,0 +1,174 @@
+.home {
+  .content {
+    font-family: 'Lato', sans-serif;
+    margin-top: var(--header-h);
+
+    .slider {
+      .carousel-caption {
+        bottom: 2.75rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        margin-bottom: 1.7rem;
+      }
+
+      p {
+        font-weight: 700;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .band {
+      .band-description {
+        text-align: justify;
+        margin: 0 1.6rem 1.5rem;
+      }
+
+      .member {
+        @include flex;
+        padding: 3.2rem 0;
+
+        &-item {
+          flex: 1;
+        }
+
+        &-title {
+          text-align: center;
+          font-size: 1.5rem;
+          margin: 1.5rem 0;
+        }
+
+        &-image {
+          margin: 0 auto 1.6rem;
+          width: 15.4rem;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .tour {
+      color: #fff;
+      background-color: #000;
+
+      .ticket {
+        margin: 4rem 0 3.2rem;
+
+        color: #000;
+        background-color: #fff;
+
+        &-item {
+          position: relative;
+          padding: 8px 16px;
+          border-bottom: 1px solid #ddd;
+
+          span:first-child {
+            color: #757575;
+          }
+
+          .sold-out {
+            display: inline-block;
+            margin-left: 1.6rem;
+            padding: 0 8px;
+
+            color: #fff;
+            background-color: #f44336;
+          }
+        }
+
+        &-quantity {
+          position: absolute;
+          top: 50%;
+          right: 3.2rem;
+          transform: translateY(-50%);
+          display: block;
+          @include square(2.5rem);
+
+          text-align: center;
+          line-height: 2.5rem;
+          border-radius: 50%;
+
+          color: #fff;
+          background-color: #000;
+        }
+      }
+
+      .address {
+        @include flex;
+        gap: 1.6rem;
+
+        &-item {
+          flex: 1;
+
+          &:hover .address-image {
+            opacity: 0.6;
+          }
+        }
+
+        &-body {
+          padding: 1.6rem;
+          font-size: 1.5rem;
+
+          color: #000;
+          background-color: #fff;
+        }
+
+        &-title {
+          font-weight: 700;
+          margin: 1.5rem 0;
+          font-size: inherit;
+        }
+
+        &-date {
+          opacity: 0.6;
+        }
+
+        &-description {
+          margin: 1.5rem 0;
+        }
+      }
+    }
+
+    .contact {
+      &-body {
+        margin-top: 1.5rem;
+        display: flex;
+      }
+
+      &-info,
+      &-form {
+        flex: 1;
+      }
+
+      &-info-item {
+        font-size: 1.8rem;
+
+        span {
+          margin-left: 1rem;
+        }
+      }
+
+      &-control {
+        @include flex;
+        gap: 1.5rem;
+        margin-bottom: 8px;
+      }
+
+      &-control input {
+        flex: 1;
+
+        padding: 8px;
+        border: 1px solid #ccc !important;
+
+        &:focus {
+          outline-color: #2cccff;
+        }
+      }
+
+      &-control:last-child {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

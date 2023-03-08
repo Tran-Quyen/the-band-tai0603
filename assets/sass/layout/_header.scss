@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  @include flex(space-between);
+  height: var(--header-h);
+
+  background-color: #000;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  .nav {
+    @include flex;
+
+    &-item {
+      position: relative;
+      > a {
+        display: block;
+        height: var(--header-h);
+        line-height: var(--header-h);
+        padding: 0 2.4rem;
+
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      &:hover > a {
+        color: #000;
+        background-color: #ccc;
+      }
+
+      &:has(.subnav):hover > .subnav {
+        display: block;
+      }
+    }
+  }
+
+  .subnav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 16rem;
+
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &-item {
+      a {
+        display: block;
+        padding: 8px 16px;
+        color: #000;
+        text-transform: capitalize;
+      }
+
+      &:hover > a {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .search-btn {
+    width: 6.2rem;
+    height: 100%;
+
+    color: #fff;
+    background-color: transparent;
+
+    font-size: 1.55rem;
+
+    &:hover {
+      background-color: #f44336;
+    }
+  }
+}

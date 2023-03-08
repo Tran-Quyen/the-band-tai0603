@@ -1,0 +1,18 @@
+@mixin square($size: 150px) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flex($justify_content: start, $align_items: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

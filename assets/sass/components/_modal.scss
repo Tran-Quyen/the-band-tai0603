@@ -1,0 +1,16 @@
+.modal {
+  &-dialog {
+    top: calc(var(--header-h) + 1rem);
+    transform: translateY(-50%);
+  }
+
+  &-content {
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    button {
+      font-size: 1.6rem;
+    }
+  }
+}

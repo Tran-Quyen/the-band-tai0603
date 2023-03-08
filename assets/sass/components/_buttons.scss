@@ -1,0 +1,14 @@
+.band-btn {
+  min-width: 12rem;
+  min-height: 4rem;
+
+  color: #fff;
+  background-color: #000;
+
+  text-transform: capitalize;
+
+  &:hover {
+    color: #000;
+    background-color: #ccc;
+  }
+}
