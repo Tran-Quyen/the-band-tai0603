@@ -18,6 +18,21 @@
       href="./assets/logo/logo512.png"
       type="image/png"
     />
+    <meta name="title" content="The Band" />
+    <meta name="description" content="This is the clone website from W3C" />
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The Band" />
+    <meta
+      property="og:description"
+      content="This is the clone website from W3C"
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta
+      property="og:image"
+      content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMpUheVCuDwqEdKT2dRM5MqqlakPO9lVK1LM0ki_u6g&s"
+    />
 
     <!-- Font awesome -->
     <link
@@ -66,27 +81,56 @@
     <div id="app">
       <div class="home">
         <div class="header">
-          <ul class="nav">
-            <li class="nav-item"><a href="#">Home</a></li>
-            <li class="nav-item"><a href="#band">Band</a></li>
-            <li class="nav-item"><a href="#tour">Tour</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
-            <li class="nav-item">
-              <a href="#" title="More">
-                More <i class="fa-solid fa-caret-down"></i
-              ></a>
+          <!-- Navbar Desktop -->
+          <div class="nav">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="#band">Band</a></li>
+              <li class="nav-item"><a href="#tour">Tour</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+              <li class="nav-item">
+                <a href="#" title="More">
+                  More <i class="fa-solid fa-caret-down"></i
+                ></a>
 
-              <ul class="subnav">
-                <li class="subnav-item"><a href="#">Merchandise</a></li>
-                <li class="subnav-item"><a href="#">Extras</a></li>
-                <li class="subnav-item"><a href="#">Media</a></li>
-              </ul>
-            </li>
-          </ul>
+                <ul class="subnav">
+                  <li class="subnav-item"><a href="#">Merchandise</a></li>
+                  <li class="subnav-item"><a href="#">Extras</a></li>
+                  <li class="subnav-item"><a href="#">Media</a></li>
+                </ul>
+              </li>
+            </ul>
 
-          <button class="search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <!-- Navbar Mobile -->
+          <div class="nav-mobile">
+            <h1 class="nav-home"><a href="#">Home</a></h1>
+
+            <button class="nav-menu" data-toggle="nav_list">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-list" data-menu="nav_list">
+              <li class="nav-item"><a href="#band">Band</a></li>
+              <li class="nav-item"><a href="#tour">Tour</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+              <li class="nav-item" data-toggle="subnav">
+                <a href="javascript:void(0)" title="More">
+                  More <i class="fa-solid fa-caret-down"></i
+                ></a>
+
+                <ul class="subnav" data-menu="subnav">
+                  <li class="subnav-item"><a href="#">Merchandise</a></li>
+                  <li class="subnav-item"><a href="#">Extras</a></li>
+                  <li class="subnav-item"><a href="#">Media</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="content">

@@ -4,7 +4,7 @@ html {
   // 62.5% <=> 10px
   font-size: 62.5%;
   line-height: 1.4;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   scroll-behavior: smooth;
 }
 
@@ -19,6 +19,12 @@ body {
   width: 80rem;
   margin: 0 auto;
   padding: 6.4rem 0;
+
+  @include mobile {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .main-title {
@@ -26,7 +32,7 @@ body {
   margin-bottom: 1.5rem;
 
   font-size: 3rem;
-  font-family: 'Segoe UI', 'Lato', sans-serif;
+  font-family: 'Segoe UI', var(--main-font);
   font-weight: 400;
 
   letter-spacing: 4px;

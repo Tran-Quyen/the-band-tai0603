@@ -16,3 +16,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// Responsive
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 46.1875em; // 739px
+$tablet-min-w: 46.25em; //740px
+$tablet-max-w: 63.9375em; //1023px
+
+@mixin tablet_and_mobile {
+  @media (max-width: $tablet-max-w) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-min-w) and (max-width: $tablet-max-w) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
